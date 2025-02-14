@@ -1,0 +1,156 @@
+import React, { useState } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const NavBar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const menuItems = [
+        { label: 'Home', path: '/' },
+        { label: 'Features', path: '/features' },
+        { label: 'Technical Connector', path: '/technical' },
+        { label: 'About us', path: '/about' },
+    ];
+
+    const othersSubItems = [
+        { label: 'API Integration', path: '' },
+        { label: 'Crypto Currency', path: '' },
+        { label: 'Our vision', path: '' },
+    ];
+
+    return (
+        <nav className="bg-[#051622] border-2 fixed w-full z-50 font-poppins">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-30">
+                    {/* Logo and Brand */}
+                    <div className="flex-shrink-0 flex items-center">
+                        <Link to="/" className="flex items-center space-x-3 text-white text-2xl">
+                            <img
+                                src="src\\assets\\logo-CI6Py0Md.svg"
+                                alt="GamingPE Logo"
+                                className="h-35 w-70"
+                            />
+                        </Link>
+                    </div>
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:block">
+                        <div className="ml-10 flex items-center space-x-8 text-2xl">
+                            {menuItems.map((item) => (
+                                <Link
+                                    key={item.label}
+                                    to={item.path}
+                                    className="text-white hover:text-sky-400 transition-colors duration-200 text-lg"
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
+                            {/* Others Dropdown */}
+                            <div className="relative group">
+                                <button
+                                    className="flex items-center text-white hover:text-sky-400 transition-colors duration-200 text-lg"
+                                >
+                                    Others
+                                    <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-700 group-hover:rotate-180" />
+                                </button>
+                                {/* Dropdown Content */}
+                                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-[#051622] ring-1 ring-black ring-opacity-5 
+                              transform opacity-0 invisible scale-95 -translate-y-full 
+                              group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:translate-y-0 
+                              transition-all duration-700 ease-out origin-top">
+                                    <div className="py-5 overflow-hidden">
+                                        {othersSubItems.map((item, index) => (
+                                            <Link
+                                                key={item.label}
+                                                to={item.path}
+                                                className="block px-4 py-2 text-base text-white hover:bg-[#00A6FB] hover:text-white
+                                 transform -translate-y-full opacity-0
+                                 group-hover:opacity-100 group-hover:translate-y-0
+                                 transition-all duration-700"
+                                                style={{
+                                                    transitionDelay: `${index * 150}ms`,
+                                                    transitionProperty: 'all'
+                                                }}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                            <button className="border-3 border-[#00A6FB] bg-[#051622] text-white px-10 py-3 rounded-full text-lg cursor-pointer hover:bg-[#00A6FB] transition-colors duration-200">
+                                Get in touch
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Mobile menu button */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={toggleMenu}
+                            className="text-gray-300 hover:text-white p-2"
+                            aria-label="Toggle menu"
+                        >
+                            {isMenuOpen ? (
+                                <X className="h-8 w-8" />
+                            ) : (
+                                <Menu className="h-8 w-8" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Navigation */}
+            <div
+                className={`md:hidden transition-all duration-700 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    } overflow-hidden`}
+            >
+                <div className="px-4 pt-4 pb-5 space-y-2 bg-[#051622] shadow-lg">
+                    {menuItems.map((item) => (
+                        <Link
+                            key={item.label}
+                            to={item.path}
+                            className="text-gray-300 hover:text-white block px-4 py-3 text-lg font-medium transition-colors duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                    {/* Mobile Others Dropdown */}
+                    <div className="px-4">
+                        <button
+                            onClick={toggleMenu}
+                            className="flex items-center w-full text-gray-300 hover:text-white py-3 text-lg font-medium"
+                        >
+                            Others
+                            <ChevronDown className={`ml-2 h-4 w-4 transition-transform duration-700 ${isMenuOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        <div className={`pl-4 space-y-2 overflow-hidden transition-all duration-700 ease-in-out transform
+                          ${isMenuOpen ? 'max-h-48 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-full'}`}>
+                            {othersSubItems.map((item) => (
+                                <Link
+                                    key={item.label}
+                                    to={item.path}
+                                    className="text-gray-300 hover:text-white block py-2 text-lg transition-colors duration-200"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                    <button className="w-full text-center bg-[#00A6FB] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#0081C9] transition-colors duration-200 mt-4">
+                        Get in touch
+                    </button>
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+export default NavBar;

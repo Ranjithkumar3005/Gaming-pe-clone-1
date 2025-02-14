@@ -1,11 +1,17 @@
 import React from "react";
+import { BrowserRouter } from 'react-router-dom';
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
-    <div>
-      <h1 className=" text-5xl text-blue-500 font-bold "> Hello world! </h1>
-      <button className=" text-blue bg-red-500 px-4 py-2">Byee</button>
-    </div>
+    <>
+      <NavBar></NavBar>
+      <div className="pt-30"> {/* Adjust this padding based on the navbar height */}
+        <Home />
+      </div>
+    </>
+
   );
 };
 
