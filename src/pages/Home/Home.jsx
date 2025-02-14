@@ -1,5 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import FraudProtection from '../../components/Fraud/FraudProtection';
+import Scrolling from '../../components/Scrolling/Scrolling';
+import PaymentGateway from '../../components/PaymentGateway/PaymentGateway';
 
 function Home() {
     const videoRef = useRef(null);
@@ -31,7 +33,7 @@ function Home() {
     return (
         <div className="bg-[#051622] relative w-full overflow-hidden">
             {/* Background Video */}
-            <video ref={videoRef} className="absolute inset-0 w-full min-h-[500px] max-h-[700px] object-cover" muted playsInline autoPlay loop>
+            <video ref={videoRef} className="absolute inset-0 w-full object-cover" muted playsInline autoPlay >
                 <source src="/videos/homeMap-DIlrE9fC.mp4" type="video/mp4" />
             </video>
 
@@ -76,6 +78,9 @@ function Home() {
             </div>
             {/* Fraud Protection Section */}
             <FraudProtection></FraudProtection>
+            <Scrolling></Scrolling>
+            <PaymentGateway></PaymentGateway>
+
         </div>
     );
 }

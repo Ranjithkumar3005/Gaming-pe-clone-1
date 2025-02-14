@@ -13,7 +13,7 @@ const FraudProtection = () => {
     ];
 
     return (
-        <div className="mt-32 lg:px-30 md:p-10 sm:p-5">
+        <div className="lg:px-30 md:p-10 sm:p-5">
             <div className="text-center mb-16 lg:px-50 md:p-20 sm:p:20">
                 <h2 className="text-5xl font-bold text-white mb-4">FRAUD PROTECTION</h2>
                 <p className="lg:text-lg text-gray-300 sm:text-sm ">
