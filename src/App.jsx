@@ -7,9 +7,7 @@ const App = () => {
   return (
     <>
       <NavBar></NavBar>
-      <div className="pt-30"> {/* Adjust this padding based on the navbar height */}
-        <Home />
-      </div>
+      <Home />
     </>
 
   );

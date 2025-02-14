@@ -23,28 +23,28 @@ const NavBar = () => {
     ];
 
     return (
-        <nav className="bg-[#051622] border-2 fixed w-full z-50 font-poppins">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-30">
+        <nav className="bg-[#051622]  w-full z-50 font-poppins">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-18">
+                <div className="flex items-center justify-between h-28">
                     {/* Logo and Brand */}
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/" className="flex items-center space-x-3 text-white text-2xl">
                             <img
                                 src="src\\assets\\logo-CI6Py0Md.svg"
                                 alt="GamingPE Logo"
-                                className="h-35 w-70"
+                                className="h-35 w-60"
                             />
                         </Link>
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:block">
-                        <div className="ml-10 flex items-center space-x-8 text-2xl">
+                        <div className="ml-10 flex items-center space-x-8 ">
                             {menuItems.map((item) => (
                                 <Link
                                     key={item.label}
                                     to={item.path}
-                                    className="text-white hover:text-sky-400 transition-colors duration-200 text-lg"
+                                    className="text-white hover:text-sky-400 transition-colors duration-200 text-[17px]"
                                 >
                                     {item.label}
                                 </Link>
@@ -52,7 +52,7 @@ const NavBar = () => {
                             {/* Others Dropdown */}
                             <div className="relative group">
                                 <button
-                                    className="flex items-center text-white hover:text-sky-400 transition-colors duration-200 text-lg"
+                                    className="flex items-center text-white hover:text-sky-400 transition-colors duration-200 text-[17px]"
                                 >
                                     Others
                                     <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-700 group-hover:rotate-180" />
@@ -82,7 +82,7 @@ const NavBar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button className="border-3 border-[#00A6FB] bg-[#051622] text-white px-10 py-3 rounded-full text-lg cursor-pointer hover:bg-[#00A6FB] transition-colors duration-200">
+                            <button className="border-2 border-[#00A6FB] bg-[#051622] text-white px-10 py-3 rounded-full text-lg cursor-pointer hover:bg-[#00A6FB] transition-colors duration-200">
                                 Get in touch
                             </button>
                         </div>
@@ -120,6 +120,7 @@ const NavBar = () => {
                         >
                             {item.label}
                         </Link>
+
                     ))}
                     {/* Mobile Others Dropdown */}
                     <div className="px-4">
