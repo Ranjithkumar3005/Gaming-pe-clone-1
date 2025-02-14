@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Globe2, Users, Shield, ArrowRight, Lock, UserCheck, CreditCard, Smartphone, ArrowDown, ChevronDown } from 'lucide-react';
+import { Globe2, Users, Shield, ArrowRight, Lock, UserCheck, CreditCard, Smartphone, ArrowDown, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from "framer-motion";
 
 function Home() {
     const videoRef = useRef(null);
@@ -100,13 +101,12 @@ function Home() {
                                 <div
                                     key={card.id}
                                     data-id={card.id}
-                                    className={`fraud-card mb-15 bg-[#00A6FB]/10 backdrop-blur-lg p-6 rounded-2xl border border-green-400/50 relative transition-all duration-500 ${isExpanded ? 'h-auto' : 'h-[150px]'
+                                    className={`group fraud-card mb-15 bg-[#00A6FB]/10 backdrop-blur-lg p-6 rounded-2xl border border-green-400/50 relative transition-all duration-500 ${isExpanded ? 'h-auto' : 'h-[150px]'
                                         }`}
                                 >
                                     {/* Icon Wrapper - Move Up */}
                                     <div
-                                        className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00A6FB]/10 z-10 border-2 border-green-500 p-6 rounded-full transition-all duration-500 ${isExpanded ? 'top-[-70px]' : 'top-[-30px]'
-                                            }`}
+                                        className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00A6FB]/10 z-10 border-2 border-green-500 p-6 rounded-full transition-all duration-500 ${isExpanded ? 'top-[-70px]' : 'top-[-30px] group-hover:top-[-20px]'} `}
                                     >
                                         <Icon className="w-12 h-12 text-green-500" />
                                     </div>
@@ -115,13 +115,25 @@ function Home() {
                                     <div className="flex flex-col items-center text-center pt-7">
                                         <h3 className="text-xl font-bold text-green-500 mb-2">{card.title}</h3>
 
-                                        <button
+                                        <motion.button
                                             onClick={() => setExpandedCard(isExpanded ? null : card.id)}
                                             className="text-green-500 flex items-center gap-1 transition-colors"
+                                            animate={!isExpanded ? { y: [0, -5, 0] } : { y: 0 }} // Bounce effect only on "Read More"
+                                            transition={{
+                                                repeat: Infinity,
+                                                repeatType: "loop",
+                                                duration: 1.2,
+                                                ease: "easeInOut",
+                                            }}
                                         >
                                             {isExpanded ? 'Close' : 'Read More'}
-                                            <ChevronDown className="w-5 h-5 transform transition-transform duration-300" />
-                                        </button>
+                                            {isExpanded ? (
+                                                <ChevronUp className="w-5 h-5 transform transition-transform duration-150" />
+                                            ) : (
+                                                <ChevronDown className="w-5 h-5 transform transition-transform duration-150" />
+                                            )}
+                                        </motion.button>
+
 
                                         {isExpanded && <div className="mt-4 text-gray-300">{card.content}</div>}
                                     </div>

@@ -23,7 +23,7 @@ const NavBar = () => {
     ];
 
     return (
-        <nav className="bg-[#051622]  w-full z-50 font-poppins">
+        <nav className="bg-gradient-to-r from-[#193549] to-[#051622] w-full z-50 font-poppins">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-18">
                 <div className="flex items-center justify-between h-28">
                     {/* Logo and Brand */}
