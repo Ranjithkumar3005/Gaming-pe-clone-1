@@ -5,12 +5,12 @@ import JoinEvent from '../../components/JoinEvent/JoinEvent';
 
 const Features = () => {
     return (
-        <div className='bg-gradient-to-r from-[#153042] to-[#051622] min-h-screen w-full flex flex-col '>
+        <div className='bg-gradient-to-tr from-[#153042] to-[#051622] min-h-screen w-full flex flex-col '>
             <div className="flex mt-10 flex-col items-center">
                 <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-white to-sky-300 text-8xl font-bold font-poppins">
                     FEATURES
                 </h1>
-                <p className="text-white text-lg max-w-xl mt-4">
+                <p className="text-white text-lg max-w-xl text-center mt-4">
                     Gamingpe streamlines global payments with a single API, offering secure, scalable solutions to enhance transactions and drive business growth.
                 </p>
             </div>
