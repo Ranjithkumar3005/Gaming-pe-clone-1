@@ -3,6 +3,7 @@ import FraudProtection from '../../components/Fraud/FraudProtection';
 import Scrolling from '../../components/Scrolling/Scrolling';
 import PaymentGateway from '../../components/PaymentGateway/PaymentGateway';
 import InsighfulData from '../../components/InsighfulData/InsighfulData';
+import SubFeature from '../../components/SubFeature/SubFeature';
 
 function Home() {
     const videoRef = useRef(null);
@@ -82,6 +83,7 @@ function Home() {
             <Scrolling></Scrolling>
             <PaymentGateway></PaymentGateway>
             <InsighfulData></InsighfulData>
+            <SubFeature></SubFeature>
 
         </div>
     );
