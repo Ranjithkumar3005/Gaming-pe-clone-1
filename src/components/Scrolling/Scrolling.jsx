@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 const Scrolling = () => {
     const images = [
-        "src\\assets\\paymentmethods2-CH6A_cmo.svg",
-        "src\\assets\\download.svg",
-        "src\\assets\\paymentmethods3-BG-ta1Ms.svg",
-        "src\\assets\\paymentmethods4-DUdOYnni.svg",
-        "src\\assets\\paymentmethods5-DHDmbJFk.svg",
+        "/assets/paymentmethods2-CH6A_cmo.svg",
+        "/assets/download.svg",
+        "/assets/paymentmethods3-BG-ta1Ms.svg",
+        "/assets/paymentmethods4-DUdOYnni.svg",
+        "/assets/paymentmethods5-DHDmbJFk.svg",
     ];
     return (
         <div className='px-30'>

@@ -32,7 +32,7 @@ const NavBar = () => {
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/" className="flex items-center space-x-3 text-white text-2xl">
                             <img
-                                src="src\\assets\\logo-CI6Py0Md.svg"
+                                src="/assets/logo-CI6Py0Md.svg"
                                 alt="GamingPE Logo"
                                 className="h-35 w-60"
                             />

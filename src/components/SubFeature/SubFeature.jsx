@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 const SubFeature = () => {
     const images = [
-        "src\\assets\\paymentmethods2-CH6A_cmo.svg",
-        "src\\assets\\download.svg",
-        "src\\assets\\paymentmethods3-BG-ta1Ms.svg",
-        "src\\assets\\paymentmethods4-DUdOYnni.svg",
-        "src\\assets\\paymentmethods5-DHDmbJFk.svg",
+        "/assets/paymentmethods2-CH6A_cmo.svg",
+        "/assets/download.svg",
+        "/assets/paymentmethods3-BG-ta1Ms.svg",
+        "/assets/paymentmethods4-DUdOYnni.svg",
+        "/assets/paymentmethods5-DHDmbJFk.svg",
     ];
     return (
         <div className="min-h-screen lg:px-30 bg-[#051622] text-white overflow-hidden">
@@ -15,7 +15,7 @@ const SubFeature = () => {
             <div className="relative h-[1000px]">
                 {/* Header Section */}
                 <div>
-                    <img src="src\\assets\\aboutBanner-D1jHUpAf.png"></img>
+                    <img src="/assets/aboutBanner-D1jHUpAf.png"></img>
                 </div>
 
                 {/* Integration Section */}
@@ -72,7 +72,7 @@ const SubFeature = () => {
 
                 </div>
                 <div className="absolute right-[13%] bottom-[8%]">
-                    <img className="w-[400px] h-[250px] rounded-2xl" src="src\\assets\\visaCard-BnJ_DBUw.webp"></img>
+                    <img className="w-[400px] h-[250px] rounded-2xl" src="/assets/visaCard-BnJ_DBUw.webp"></img>
                 </div>
 
 

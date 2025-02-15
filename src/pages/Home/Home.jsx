@@ -89,7 +89,7 @@ function Home() {
             <div className="mt-15 h-[1px] bg-black shadow-[0_5px_5px_rgba(0,0,0,0.5)]"></div>
             <div className="flex flex-col items-center justify-center text-center">
                 <img
-                    src="src\\assets\\logo-CI6Py0Md.svg"
+                    src="/assets/logo-CI6Py0Md.svg"
                     alt="GamingPE Logo"
                     className="h-20 w-60"
                 />
