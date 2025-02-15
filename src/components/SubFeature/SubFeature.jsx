@@ -9,7 +9,7 @@ const SubFeature = () => {
         "src\\assets\\paymentmethods5-DHDmbJFk.svg",
     ];
     return (
-        <div className="min-h-screen lg:px-30 text-white overflow-hidden">
+        <div className="min-h-screen lg:px-30 bg-[#051622] text-white overflow-hidden">
 
             {/* Main Content */}
             <div className="relative h-[1000px]">

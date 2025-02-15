@@ -10,7 +10,7 @@ function InsighfulData() {
         }
     }, []);
     return (
-        <div className="min-h-screen mt-10 px-30 bg-[#051622] text-white p-8">
+        <div className="min-h-screen bg-[#051622] mt-10 px-30 text-white p-8">
             {/* Hero Section */}
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-25 items-center">

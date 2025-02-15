@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Shield } from 'lucide-react';
+import { useState } from 'react';
+
 
 function JoinEvent() {
     const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ function JoinEvent() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center px-4">
+        <div className="bg-[#051622] min-h-screen flex flex-col items-center px-4">
             {/* Logo Section */}
             <div className="text-center mb-2">
                 <img
@@ -35,7 +35,7 @@ function JoinEvent() {
             </div>
 
             {/* Join Event Section */}
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-4xl">
                 <h2 className="text-5xl font-bold mb-12 text-center">
                     <span className="text-[#a8e6cf]">JOIN OUR</span>
                     <span className="text-white"> EVENT</span>
@@ -51,7 +51,7 @@ function JoinEvent() {
                             value={formData.firstName}
                             onChange={handleChange}
                             placeholder="First name *"
-                            className="w-full md:w-[320px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
+                            className="w-full md:w-[425px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
                             required
                         />
                         <input
@@ -60,7 +60,7 @@ function JoinEvent() {
                             value={formData.lastName}
                             onChange={handleChange}
                             placeholder="Last name *"
-                            className="w-full md:w-[320px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
+                            className="w-full md:w-[425px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
                             required
                         />
                     </div>
@@ -73,7 +73,7 @@ function JoinEvent() {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Email *"
-                            className="w-full md:w-[320px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
+                            className="w-full md:w-[425px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
                             required
                         />
                         <input
@@ -82,7 +82,7 @@ function JoinEvent() {
                             value={formData.company}
                             onChange={handleChange}
                             placeholder="Company"
-                            className="w-full md:w-[320px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
+                            className="w-full md:w-[425px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
                         />
                     </div>
 
@@ -94,7 +94,7 @@ function JoinEvent() {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="Phone"
-                            className="w-full md:w-[320px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
+                            className="w-full md:w-[425px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
                         />
                         <input
                             type="text"
@@ -102,7 +102,7 @@ function JoinEvent() {
                             value={formData.description}
                             onChange={handleChange}
                             placeholder="Description"
-                            className="w-full md:w-[320px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
+                            className="w-full md:w-[425px] px-4 py-3 rounded-lg bg-[#112240] border border-[#233554] text-white placeholder-gray-400 focus:outline-none focus:border-[#4CAF50]"
                         />
                     </div>
 

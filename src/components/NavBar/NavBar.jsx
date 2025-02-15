@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 const NavBar = () => {
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    const navigate = useNavigate();
 
     const menuItems = [
         { label: 'Home', path: '/' },
@@ -59,9 +61,10 @@ const NavBar = () => {
                                 </button>
                                 {/* Dropdown Content */}
                                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-[#051622] ring-1 ring-black ring-opacity-5 
-                              transform opacity-0 invisible scale-95 -translate-y-full 
-                              group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:translate-y-0 
-                              transition-all duration-700 ease-out origin-top">
+  transform opacity-0 invisible scale-95 -translate-y-full 
+  group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:translate-y-0 
+  transition-all duration-700 ease-out origin-top 
+  z-50"> {/* Add z-50 */}
                                     <div className="py-5 overflow-hidden">
                                         {othersSubItems.map((item, index) => (
                                             <Link
@@ -82,9 +85,10 @@ const NavBar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button className="border-2 border-[#00A6FB] bg-[#051622] text-white px-10 py-3 rounded-full text-lg cursor-pointer hover:bg-[#00A6FB] transition-colors duration-200">
-                                Get in touch
-                            </button>
+                            <Link to={"/newsletter"}>
+                                <button className="border-2 border-[#00A6FB] bg-[#051622] text-white px-10 py-3 rounded-full text-lg cursor-pointer hover:bg-[#00A6FB] transition-colors duration-200">
+                                    Get in touch
+                                </button></Link>
                         </div>
                     </div>
 
@@ -145,9 +149,15 @@ const NavBar = () => {
                             ))}
                         </div>
                     </div>
-                    <button className="w-full text-center bg-[#00A6FB] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#0081C9] transition-colors duration-200 mt-4">
+
+
+                    <button
+                        onClick={() => navigate("/gamingpe/newsletter")}
+                        className="w-full text-center bg-[#00A6FB] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#0081C9] transition-colors duration-200 mt-4"
+                    >
                         Get in touch
                     </button>
+
                 </div>
             </div>
         </nav>
