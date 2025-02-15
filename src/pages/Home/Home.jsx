@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import FraudProtection from '../../components/Fraud/FraudProtection';
 import Scrolling from '../../components/Scrolling/Scrolling';
 import PaymentGateway from '../../components/PaymentGateway/PaymentGateway';
+import InsighfulData from '../../components/InsighfulData/InsighfulData';
 
 function Home() {
     const videoRef = useRef(null);
@@ -80,6 +81,7 @@ function Home() {
             <FraudProtection></FraudProtection>
             <Scrolling></Scrolling>
             <PaymentGateway></PaymentGateway>
+            <InsighfulData></InsighfulData>
 
         </div>
     );
